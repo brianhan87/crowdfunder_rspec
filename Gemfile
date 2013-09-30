@@ -27,12 +27,14 @@ group :development do
 	gem 'better_errors'
 	gem 'binding_of_caller'
 	gem 'pry-rails'
+	gem 'annotate', ">=2.5.0"
 end
 
 group :test do 
 	gem 'rspec-rails', '~> 2.0'
 	gem 'factory_girl_rails'
 	gem 'capybara'
+	gem 'annotate', ">=2.5.0"
 end
 
 
