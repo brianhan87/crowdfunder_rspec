@@ -28,6 +28,7 @@ group :development do
 	gem 'binding_of_caller'
 	gem 'pry-rails'
 	gem 'annotate', ">=2.5.0"
+	gem "faker", "~> 1.2.0"
 end
 
 group :test do 
@@ -35,6 +36,7 @@ group :test do
 	gem 'factory_girl_rails'
 	gem 'capybara'
 	gem 'annotate', ">=2.5.0"
+	gem "faker", "~> 1.2.0"
 end
 
 
