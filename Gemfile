@@ -38,6 +38,8 @@ group :test do
 	gem 'capybara'
 	gem 'annotate', ">=2.5.0"
 	gem "faker", "~> 1.2.0"
+	gem 'pry-rails'  # <%= bind.pry  %>
+	gem 'pry-byebug'
 end
 
 
