@@ -2,7 +2,14 @@ CrowdfunderRspec::Application.routes.draw do
   # get "welcome/index"
   # get "projects/:id" => "projects#show"
   # get "/projects" => "projects#index"
+  # resources :users
+  
+  # get "/users" => "users#index"
+  # get "users/new" => "users#new", as: "new_user"
+  # post "/users" => "users#create"
 
+
+  resources :users, :except => [:index] 
   resources :projects
   root :to => "welcome#index"
 
