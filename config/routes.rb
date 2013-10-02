@@ -1,7 +1,9 @@
 CrowdfunderRspec::Application.routes.draw do
-  get "welcome/index"
+  # get "welcome/index"
+  # get "projects/:id" => "projects#show"
+  # get "/projects" => "projects#index"
 
-  get "/projects" => "projects#index"
+  resources :projects
   root :to => "welcome#index"
 
 
