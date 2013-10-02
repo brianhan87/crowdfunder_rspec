@@ -1,7 +1,8 @@
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">CrowdFunder</a>
+      <%= link_to "CrowdFunder", root_path, class: "brand" %>
+      
       <div class="nav-collapse collapse">
         <ul class="nav">
           <li class="<%= 'active' if current_page? root_path %>">
@@ -12,13 +13,24 @@
           </li>
         </ul>
       </div>
+
       <div class="pull-right">
         <% if logged_in? %>
-          <%= link_to 'Logout', '#', class: 'btn' %>
+          <%= link_to 'Logout', logout_path, class: 'btn' %>
         <% else %>
           <%= link_to 'Sign Up', [:new, :user], class: 'btn btn-primary' %>
         <% end %>
       </div>
+      
+      <div class="pull-right">
+        <% if current_user %>
+          Logged in as: <%= link_to current_user.full_name, user_path(current_user), class: "btn btn-success" %>
+        <% else %>
+          <%= link_to "Log in", login_path, class: "btn btn-success" %>
+        <% end %>
+      </div>
+
+
     </div>
   </div>
 </div>

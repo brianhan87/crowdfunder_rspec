@@ -1,9 +1,8 @@
 CrowdfunderRspec::Application.routes.draw do
-  get "sessions/new"
-
-  get "sessions/create"
-
-  get "sessions/destroy"
+  get "logout" => "sessions#destroy", :as => "logout"
+  get "login" => "sessions#new", :as => "login"
+  get "signup" => "users#new", :as => "signup"
+  resources :sessions
 
   # get "welcome/index"
   # get "projects/:id" => "projects#show"
