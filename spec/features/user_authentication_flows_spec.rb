@@ -33,6 +33,9 @@ describe "UserAuthenticationFlows" do
   		click_button "Create Account"
   		expect(current_path).to eq(users_path)
   		expect(page).to have_no_content("Account created")
+  		within(:css, ".alert") do 
+  			have_content("Try again")
+  		end
   	end
   end
 end
