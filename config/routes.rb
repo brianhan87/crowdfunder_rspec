@@ -1,4 +1,10 @@
 CrowdfunderRspec::Application.routes.draw do
+  get "sessions/new"
+
+  get "sessions/create"
+
+  get "sessions/destroy"
+
   # get "welcome/index"
   # get "projects/:id" => "projects#show"
   # get "/projects" => "projects#index"
