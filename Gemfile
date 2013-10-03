@@ -23,26 +23,19 @@ group :assets do
   gem 'bootstrap-sass', '~> 2.2.2.0'
 end
 
-group :development do 
+group :development, :test do 
 	gem 'rspec-rails', '~> 2.0'
 	gem 'better_errors'
+	gem 'factory_girl_rails'
 	gem 'binding_of_caller'
 	gem 'pry-rails'
-	gem 'annotate', ">=2.5.0"
-	gem "faker", "~> 1.2.0"
-end
-
-group :test do 
-	gem 'rspec-rails', '~> 2.0'
-	gem 'factory_girl_rails'
-	gem 'capybara'
-	gem 'annotate', ">=2.5.0"
-	gem "faker", "~> 1.2.0"
-	gem 'pry-rails'  # <%= bind.pry  %>
 	gem 'pry-byebug'
+	gem 'faker' 
+	gem 'selenium-webdriver'
+	gem 'capybara'
+	gem 'faker'
+	gem 'annotate', '>=2.5.0'
 end
-
-
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

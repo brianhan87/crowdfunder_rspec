@@ -10,9 +10,17 @@
 #  updated_at :datetime         not null
 #
 
-class Pledge < ActiveRecord::Base
-  attr_accessible :amount, :project_id, :user_id
+require 'spec_helper'
 
-  belongs_to :project
-  belongs_to :user
+describe Pledge do
+	let!(:pledge) { FactoryGirl.build(:pledge) }
+	
+	it "should require a user" do 
+		pledge.user = nil
+
+		# Should not be able to save
+		pledge.should_not == pledge.save
+
+
+	end
 end
