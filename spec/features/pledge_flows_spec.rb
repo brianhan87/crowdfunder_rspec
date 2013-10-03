@@ -1,11 +1,11 @@
 require 'spec_helper'
 
-describe "PledgeFlows" do
-  describe "GET /pledge_flows" do
-    it "works! (now write some real specs)" do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      get pledge_flows_index_path
-      response.status.should be(200)
+describe "Pledge Listing" do
+  describe "when visiting the pledge page" do
+  	let!(:project) { FactoryGirl.create(:project) }
+
+    it "should require authenticated user" do
+    	click_link 'Back this Project'
     end
   end
 end
