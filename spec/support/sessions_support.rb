@@ -7,7 +7,7 @@ module SessionSupport
 
 		fill_in "email", with: user.email
 		fill_in "password", with: pass
-		click_button "Login"
+		click_button "Log in"
 		# Return our user when this method is called
 		user
 
