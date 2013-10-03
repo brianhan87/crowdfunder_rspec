@@ -1,2 +1,15 @@
 <h1><%= @project.title %></h1>
 
+<small><%= @project.inspect %></small>
+
+<%# link_to "Back this Project", login_path %> 
+<%# binding.pry %>
+
+<%= link_to "Back this Project", project_pledge_path(@project) %>
+
+<%#
+	link_to_unless(logged_in?, 'Back this Project', login_path) do |name|
+		link_to(name, project_pledge_path(@project))
+	end
+%>
+<%# binding.pry %>

@@ -1,11 +1,15 @@
 CrowdfunderRspec::Application.routes.draw do
+  get "pledges/show"
+
   get "logout" => "sessions#destroy", :as => "logout"
   get "login" => "sessions#new", :as => "login"
   get "signup" => "users#new", :as => "signup"
 
-  resources :sessions
+  resources :sessions, :except => [:new]
   resources :users, :except => [:index] 
-  resources :projects
+  resources :projects do 
+    resources :pledges
+  end
   root :to => "welcome#index"
 
   # get "welcome/index"
