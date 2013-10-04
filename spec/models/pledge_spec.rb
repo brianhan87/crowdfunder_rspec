@@ -36,6 +36,11 @@ describe Pledge do
 		expect(pledge).to have(1).errors_on(:amount)
 	end 
 
+	it "should require an amount greater than 0" do 
+		pledge.amount = -10
+		pledge.should_not == pledge.save
+		expect(pledge).to have(1).errors_on(:amount)
+	end
 
 
 end

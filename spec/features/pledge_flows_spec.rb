@@ -24,7 +24,7 @@ describe "Pledge Listing" do
 
     	click_link 'Back this Project'
 
-    	expect(current_path).to eq(new_product_pledge_path(@project))
+    	expect(current_path).to eq(new_project_pledge_path(@project))
     	expect(Pledge.count).to eq(0)
 
     	fill_in 'pledge[amount]', with: 100
